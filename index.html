@@ -1,0 +1,963 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#004a6d">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":35,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Alchemic Ronin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="There is no truth in flesh, only betrayal.
+ There is no strength in flesh, only weakness.
+ There is no constancy in flesh, only decay.
+ There is no certainty in flesh but death.
+ -- Omnissiah">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/12c50f09/" target="_self">
+          <img src="https://i.loli.net/2020/03/31/RqMvlu64ya2kOem.png" srcset="/img/loading.gif" alt="双象杀单王">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/12c50f09/">双象杀单王</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/12c50f09/">
+          
+          
+            
+          
+          
+
+
+目录国际象棋初级教程第三章 残局入门第一节 单王杀局四、双象杀单王
+
+『练习』52window.addEventListener("message",e=>{e.data&&"6575194"===e.data.id&&document.getElementById(`${e.data.id}`)&&(document.getElementById(`${e.data.id}`).style
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-31 16:54" pubdate>
+              2020-03-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Chess/">Chess</a>
+            
+              <a href="/tags/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E5%88%9D%E7%BA%A7%E6%95%99%E7%A8%8B/">国际象棋初级教程</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/28ffee28/" target="_self">
+          <img src="https://i.loli.net/2020/03/31/RqMvlu64ya2kOem.png" srcset="/img/loading.gif" alt="单车杀单王">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/28ffee28/">单车杀单王</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/28ffee28/">
+          
+          
+            
+          
+          
+
+
+目录国际象棋初级教程第三章 残局入门第一节 单王杀局三、单车杀单王
+
+『练习』50window.addEventListener("message",e=>{e.data&&"6575014"===e.data.id&&document.getElementById(`${e.data.id}`)&&(document.getElementById(`${e.data.id}`).style
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-31 15:08" pubdate>
+              2020-03-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Chess/">Chess</a>
+            
+              <a href="/tags/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E5%88%9D%E7%BA%A7%E6%95%99%E7%A8%8B/">国际象棋初级教程</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/9210f0e/" target="_self">
+          <img src="https://i.loli.net/2020/03/31/RqMvlu64ya2kOem.png" srcset="/img/loading.gif" alt="后杀单王">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/9210f0e/">后杀单王</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/9210f0e/">
+          
+          
+            
+          
+          
+
+
+目录国际象棋初级教程第三章 残局入门第一节 单王杀局二、后杀单王
+
+『练习』49window.addEventListener("message",e=>{e.data&&"6573292"===e.data.id&&document.getElementById(`${e.data.id}`)&&(document.getElementById(`${e.data.id}`).style.
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-30 20:31" pubdate>
+              2020-03-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Chess/">Chess</a>
+            
+              <a href="/tags/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E5%88%9D%E7%BA%A7%E6%95%99%E7%A8%8B/">国际象棋初级教程</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/fa0386b7/" target="_self">
+          <img src="https://i.loli.net/2020/03/31/RqMvlu64ya2kOem.png" srcset="/img/loading.gif" alt="双车杀单王">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/fa0386b7/">双车杀单王</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/fa0386b7/">
+          
+          
+            
+          
+          
+
+
+目录国际象棋初级教程第三章 残局入门第一节 单王杀局一、双车杀单王
+
+『练习』45window.addEventListener("message",e=>{e.data&&"6573086"===e.data.id&&document.getElementById(`${e.data.id}`)&&(document.getElementById(`${e.data.id}`).style
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-30 20:30" pubdate>
+              2020-03-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Chess/">Chess</a>
+            
+              <a href="/tags/%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E5%88%9D%E7%BA%A7%E6%95%99%E7%A8%8B/">国际象棋初级教程</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/59eedfd8/" target="_self">
+          <img src="https://i.loli.net/2020/03/09/Q6OGhcxKfjeyUPd.png" srcset="/img/loading.gif" alt="进阶篇 VII [CAN]">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/59eedfd8/">进阶篇 VII [CAN]</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/59eedfd8/">
+          
+          
+            
+          
+          
+
+
+项目&amp;教程仓库：-STM32-RoboMaster-
+
+1.0 什么是CAN?1.1 背景 + 定义
+Controller Area Network 控制器局域网络 是ISO国际标准化的串行通信协议。在汽车产业中，出于对安全性、舒适性、方便性、低公害、低成本的要求，各种各样的电子控制系统被开发了出来。由于这些系统之间通信所用的数据类型及对可靠性的要求不尽相同，由多条总线构成的情况很多
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-29 22:45" pubdate>
+              2020-03-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%9C%BA%E6%A2%B0%E7%A5%9E%E6%95%99/">机械神教</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/STM32/">STM32</a>
+            
+              <a href="/tags/RoboMaster/">RoboMaster</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/fd31d369/" target="_self">
+          <img src="https://i.loli.net/2020/03/09/Q6OGhcxKfjeyUPd.png" srcset="/img/loading.gif" alt="进阶篇 VI [Timer &amp; PWM]">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/fd31d369/">进阶篇 VI [Timer &amp; PWM]</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/fd31d369/">
+          
+          
+            
+          
+          
+
+
+项目&amp;教程仓库：-STM32-RoboMaster-
+
+1.0 什么是Timer？PWM又是什么玩意儿？1.1 Timer定义
+Timer就是定时器，但是与一般我们生活中使用的定时器不同的是，Timer的单位不是s秒，而是Hz赫兹，而且通常是MHz（1,000,000Hz），定时器通常从0开始数数，然后直到占满其16位寄存器，就会告诉CPU，“我已经满得不行了～～”，然后从0开始重新
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-22 21:55" pubdate>
+              2020-03-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%9C%BA%E6%A2%B0%E7%A5%9E%E6%95%99/">机械神教</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/STM32/">STM32</a>
+            
+              <a href="/tags/RoboMaster/">RoboMaster</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/44ad04be/" target="_self">
+          <img src="https://i.loli.net/2020/03/09/Q6OGhcxKfjeyUPd.png" srcset="/img/loading.gif" alt="进阶篇 V [Clock Tree]">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/44ad04be/">进阶篇 V [Clock Tree]</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/44ad04be/">
+          
+          
+            
+          
+          
+
+
+项目&amp;教程仓库：-STM32-RoboMaster-
+
+1.0 什么是Clock Tree？1.1 定义
+时钟是单片机运行的基础，时钟信号推动单片机内各个部分执行相应的指令。时钟系统就是CPU的心脏，决定CPU速率，像人的心跳一样 只有有了心跳，人才能做其他的事情，而单片机有了时钟，才能够运行执行指令，才能够做其他的处理（点灯，串口，ADC），时钟的重要性不言而喻。
+STM32本身十
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-18 19:01" pubdate>
+              2020-03-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%9C%BA%E6%A2%B0%E7%A5%9E%E6%95%99/">机械神教</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/STM32/">STM32</a>
+            
+              <a href="/tags/RoboMaster/">RoboMaster</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/90d72de/" target="_self">
+          <img src="https://i.loli.net/2020/03/09/Q6OGhcxKfjeyUPd.png" srcset="/img/loading.gif" alt="进阶篇 IV [DMA]">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/90d72de/">进阶篇 IV [DMA]</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/90d72de/">
+          
+          
+            
+          
+          
+
+
+项目&amp;教程仓库：-STM32-RoboMaster-
+
+1.0 什么是DMA1.1 DMA的定义
+Direct Memory Access：直接存储器访问 是所有现代计算设备的重要特色，它允许不同速度的硬件装置来沟通，而不需要依赖于CPU的大量中断负载。否则，CPU需要从来源把每一片段的资料复制到暂存器，然后把它们再次写回到新的地方。在这个时间中，CPU对于其他的工作来说就无法使用。
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-17 18:12" pubdate>
+              2020-03-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%9C%BA%E6%A2%B0%E7%A5%9E%E6%95%99/">机械神教</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/STM32/">STM32</a>
+            
+              <a href="/tags/RoboMaster/">RoboMaster</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/b4c69a89/" target="_self">
+          <img src="https://i.loli.net/2020/03/09/Q6OGhcxKfjeyUPd.png" srcset="/img/loading.gif" alt="进阶篇 III [UART &amp; USART]">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/b4c69a89/">进阶篇 III [UART &amp; USART]</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/b4c69a89/">
+          
+          
+            
+          
+          
+
+
+项目&amp;教程仓库：-STM32-RoboMaster-
+
+1.0 什么是UART和USART？有什么区别嘛？1.1 UART定义
+Universal Asynchronous Receiver/Transmitter：通用异步收发传输器，是一种串行异步收发协议，应用十分广泛。UART工作原理是将数据的二进制位一位一位的进行传输。在UART通讯协议中信号线上的状态位高电平代表’1’低电平
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-14 18:24" pubdate>
+              2020-03-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%9C%BA%E6%A2%B0%E7%A5%9E%E6%95%99/">机械神教</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/STM32/">STM32</a>
+            
+              <a href="/tags/RoboMaster/">RoboMaster</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/ff6aca34/" target="_self">
+          <img src="https://i.loli.net/2020/03/09/Q6OGhcxKfjeyUPd.png" srcset="/img/loading.gif" alt="进阶篇 II [Interrupt]">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/ff6aca34/">进阶篇 II [Interrupt]</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/ff6aca34/">
+          
+          
+            
+          
+          
+
+
+项目&amp;教程仓库：-STM32-RoboMaster-
+
+1.0 什么是Interrupt？
+中断是指计算机运行过程中，出现某些意外情况需主机干预时，机器能自动停止正在运行的程序并转入处理新情况的程序，处理完毕后又返回原被暂停的程序继续运行。
+
+
+Interrupt在STM32中大致分为两种，一种就是普通的Interrupt，由外部的外设来打断MCU，另一种名为Exception，是由
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-13 21:22" pubdate>
+              2020-03-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%9C%BA%E6%A2%B0%E7%A5%9E%E6%95%99/">机械神教</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/STM32/">STM32</a>
+            
+              <a href="/tags/RoboMaster/">RoboMaster</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

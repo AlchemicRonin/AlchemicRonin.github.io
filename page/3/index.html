@@ -1,0 +1,916 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#004a6d">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":35,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Alchemic Ronin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="There is no truth in flesh, only betrayal.
+ There is no strength in flesh, only weakness.
+ There is no constancy in flesh, only decay.
+ There is no certainty in flesh but death.
+ -- Omnissiah">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/8c7a6033/" target="_self">
+          <img src="https://i.loli.net/2019/08/12/qJeBoy5MZK1ASY7.png" srcset="/img/loading.gif" alt="freeCodeCamp Certification [02]">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/8c7a6033/">freeCodeCamp Certification [02]</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/8c7a6033/">
+          
+          
+            
+          
+          freeCodeCamp JavaScript Algorithms and Data Structures Developer Certification证书图片
+证书链接
+  https://www.freecodecamp.org/certification/mavericknone/javascript-algorithms-and-data-structures
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-11 17:27" pubdate>
+              2019-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/freeCodeCamp/">freeCodeCamp</a>
+            
+              <a href="/tags/%E8%AF%81%E4%B9%A6/">证书</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/a75733f0/" target="_self">
+          <img src="https://i.loli.net/2019/08/12/dfC7Nr4knFTu5sQ.png" srcset="/img/loading.gif" alt="freeCodeCamp Certification [01]">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/a75733f0/">freeCodeCamp Certification [01]</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/a75733f0/">
+          
+          
+            
+          
+          freeCodeCamp Responsive Web Design Developer Certification证书图片
+证书链接
+  https://www.freecodecamp.org/certification/mavericknone/responsive-web-design
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-11 17:26" pubdate>
+              2019-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/freeCodeCamp/">freeCodeCamp</a>
+            
+              <a href="/tags/%E8%AF%81%E4%B9%A6/">证书</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/631bf40e/" target="_self">
+          <img src="https://i.loli.net/2019/08/11/TFJZC2GMhrXNuDi.jpg" srcset="/img/loading.gif" alt="5个前端静态网站设计项目展示">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/631bf40e/">5个前端静态网站设计项目展示</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/631bf40e/">
+          
+          
+            
+          
+          
+
+
+前言
+
+  整理了一下前些日子5个用于练习HTML，CSS，JavaScript基础的静态网页项目
+  均来自于freeCodeCamp的证书题目1~5
+Link：
+  Responsive Web Design Projects - Build a Tribute Page
+  Responsive Web Design Projects - Build a Survey Form
+  R
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-11 16:14" pubdate>
+              2019-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E6%83%85%E6%8A%A5/">技术情报</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/freeCodeCamp/">freeCodeCamp</a>
+            
+              <a href="/tags/%E4%BB%A3%E7%A0%81-%E9%A1%B9%E7%9B%AE/">代码 & 项目</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/324ffc0d/" target="_self">
+          <img src="https://i.loli.net/2019/08/12/smTMvytUAOV1QqD.jpg" srcset="/img/loading.gif" alt="槙岛圣护的书单">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/324ffc0d/">槙岛圣护的书单</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/324ffc0d/">
+          
+          
+            
+          
+          
+
+
+前言
+  这是我自己整理的在哲学领域我比较感兴趣的书籍，主要从《心理测量者》中获得的灵感，我自己也私加了一些类似书籍。粗体标记的是在《心理测量者》中直接出现的书籍。
+
+
+书籍清单哲学 &amp; 政治 &amp; 社会 &amp; 经济 &amp; 心理
+  《善恶的彼岸》 尼采
+  《悲剧的诞生》 尼采
+  《查拉图斯特拉如是说》 尼采
+  《权力意志》 尼采
+  《论人类不平等的起源》 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-11 13:28" pubdate>
+              2019-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%AE%A4%E7%9F%A5%E5%93%B2%E6%80%9D/">认知哲思</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B9%A6%E5%8D%95/">书单</a>
+            
+              <a href="/tags/%E5%BF%83%E7%90%86%E6%B5%8B%E9%87%8F%E8%80%85/">心理测量者</a>
+            
+              <a href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/3aeff5fc/" target="_self">
+          <img src="https://i.loli.net/2019/08/10/uH6W82leC7ISQ14.jpg" srcset="/img/loading.gif" alt="[2019-08-11] 游戏计划">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/3aeff5fc/">[2019-08-11] 游戏计划</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/3aeff5fc/">
+          
+          
+            
+          
+          
+
+
+游戏计划
+  [ ] 【10:30】 起床，洗脸，刷牙，测体重
+  [ ] 【10:40–11:20】早餐
+  [ ] 【番茄工作法】【11:20–12:00】写今日安排，写博客
+  [ ] 【12:00–12:40】找餐馆吃午餐
+  [ ] 【番茄工作法】【12:40–03:30】继续写博客，写技术分析文章，总结前端资源列表
+  [ ] 【番茄工作法】【03:30–05:30】复习微积分A
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-11 11:34" pubdate>
+              2019-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%AF%8F%E6%97%A5%E8%AE%A1%E5%88%92/">每日计划</a>
+            
+              <a href="/tags/%E8%AE%A1%E5%88%92/">计划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/6a923313/" target="_self">
+          <img src="https://i.loli.net/2019/08/11/TFJZC2GMhrXNuDi.jpg" srcset="/img/loading.gif" alt="Random Quote Machine">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/6a923313/">Random Quote Machine</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/6a923313/">
+          
+          
+            
+          
+          
+
+
+前端工程展示页项目介绍
+
+  freeCodeCamp上的证书题目6
+  Link：Front End Libraries Projects - Build a Random Quote Machine
+
+
+源代码 + 效果图
+
+
+  See the Pen 
+  Challenges [06] by MaverickNone (@MaverickNone)
+  on CodePen.
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-11 00:57" pubdate>
+              2019-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E6%83%85%E6%8A%A5/">技术情报</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/freeCodeCamp/">freeCodeCamp</a>
+            
+              <a href="/tags/%E4%BB%A3%E7%A0%81-%E9%A1%B9%E7%9B%AE/">代码 & 项目</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/fa742e84/" target="_self">
+          <img src="https://i.loli.net/2019/08/10/c9xm7STQ8NndBbl.jpg" srcset="/img/loading.gif" alt="UIUC资源情报整理">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/fa742e84/">UIUC资源情报整理</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/fa742e84/">
+          
+          
+            
+          
+          技术组织
+iRobotics
+  官网：https://irobotics.illinois.edu
+
+Wiki：https://irobotics.illinois.edu/wiki
+
+Email：&#x69;&#114;&#x6f;&#x62;&#111;&#x74;&#105;&#99;&#115;&#x2e;&#x69;&#x6c;&#x6c;&#x69;&#110;&#x6f;&#105
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-09 15:30" pubdate>
+              2019-08-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/UIUC%E8%B5%84%E6%BA%90/">UIUC资源</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/UIUC/">UIUC</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/5b0ea8ea/" target="_self">
+          <img src="https://i.loli.net/2019/08/10/uH6W82leC7ISQ14.jpg" srcset="/img/loading.gif" alt="[2019-08-09] 游戏计划">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/5b0ea8ea/">[2019-08-09] 游戏计划</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/5b0ea8ea/">
+          
+          
+            
+          
+          游戏计划
+  [ ] 【07:30】 起床，洗脸，刷牙，测体重
+  [ ] 【07:50–08:10】吃早餐
+  [ ] 【番茄工作法】【08:10–09:30】整理和处理邮件
+  [ ] 【番茄工作法】【09:30–11:30】做学校要求的sexual protection作业
+  [ ] 【11:30–12:10】找餐馆吃午餐
+  [ ] 【12:10–12:30】去校图书馆
+  [ ] 【番
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-08 18:40" pubdate>
+              2019-08-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%AF%8F%E6%97%A5%E8%AE%A1%E5%88%92/">每日计划</a>
+            
+              <a href="/tags/%E8%AE%A1%E5%88%92/">计划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/posts/82c40913/" target="_self">
+          <img src="https://i.loli.net/2019/08/10/KsIn9halVEDitcb.jpg" srcset="/img/loading.gif" alt="我的第1篇博客">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/82c40913/">我的第1篇博客</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/82c40913/">
+          
+          
+            
+          
+          闲话
+  以后这个博客就会作为我的正式记录文档了，可能包括游戏人生（尽量坚持每天写写，包括一些每天的总结反思，日程安排等等），技术情报，认知哲思，创业海盗，课程笔记，刻印术式等等板块
+  以前在手机的备忘录里面写了很多的文章和摘录，都没有找到合适的途径来收藏整理，现在有了Hexo后就方便多了，我没有打算让别人看见的打算，这只是我自己的外部记忆储存罢了，如果你有幸看到，那么这些留下的东西应该能够大幅
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-08-08 12:51" pubdate>
+              2019-08-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/">游戏人生</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%97%B2%E8%AF%9D/">闲话</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/2/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

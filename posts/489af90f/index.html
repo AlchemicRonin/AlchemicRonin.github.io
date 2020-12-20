@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#004a6d">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>Markdown Previewer ~ Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":35,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Alchemic Ronin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/post.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Markdown Previewer">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-08-13 14:44" pubdate>
+        August 13, 2019 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Markdown Previewer</h1>
+            
+            <div class="markdown-body">
+              <iframe
+    frameborder="no"
+    border="0"
+    marginwidth="0"
+    marginheight="0"
+    width="100%"
+    height="86"
+    src="https://music.163.com/outchain/player?type=2&id=441102360&auto=1&height=66">
+</iframe>
+
+<h2 id="前端工程展示页"><a href="#前端工程展示页" class="headerlink" title="前端工程展示页"></a>前端工程展示页</h2><h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h3><blockquote>
+<ul>
+<li>  <strong>freeCodeCamp</strong>上的证书题目7</li>
+<li>  Link：<a target="_blank" rel="noopener" href="https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer">Front End Libraries Projects - Build a Markdown Previewer</a></li>
+</ul>
+</blockquote>
+<h3 id="源代码-效果图"><a href="#源代码-效果图" class="headerlink" title="源代码 + 效果图"></a>源代码 + 效果图</h3><iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@MaverickNone/Markdown-Previewer?lite=1&outputonly=1"></iframe>
+
+<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="js,result" data-user="MaverickNone" data-slug-hash="pozgaLx" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Challenges [07]">
+  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/MaverickNone/pen/pozgaLx/">
+  Challenges [07]</a> by MaverickNone (<a target="_blank" rel="noopener" href="https://codepen.io/MaverickNone">@MaverickNone</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
+</p>
+
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<blockquote>
+<p>  <strong>如果客官您觉得不够大，看着不太爽！</strong>请点击<a target="_blank" rel="noopener" href="https://markdown-previewer--mavericknone.repl.co/"><strong>这里</strong></a>或者<a target="_blank" rel="noopener" href="https://codepen.io/MaverickNone/full/pozgaLx"><strong>这边</strong></a>~</p>
+</blockquote>
+<hr>
+<h2 id="源代码解构"><a href="#源代码解构" class="headerlink" title="源代码解构"></a>源代码解构</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight haml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs haml"><span class="hljs-meta">!!! 5</span><br><span class="hljs-tag">%<span class="hljs-selector-tag">html</span>(<span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span> )</span><br><span class="hljs-tag">  %<span class="hljs-selector-tag">head</span></span><br><span class="hljs-tag">    %<span class="hljs-selector-tag">meta</span>(<span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> )</span><br><span class="hljs-tag">    %<span class="hljs-selector-tag">title</span></span><br>      Test [07]<br><span class="hljs-tag">    %<span class="hljs-selector-tag">script</span>(<span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://kit.fontawesome.com/83ef1fc2b2.js&quot;</span> )</span><br><span class="hljs-tag">    %<span class="hljs-selector-tag">link</span>(<span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;style.css&quot;</span> )</span><br><span class="hljs-tag">  %<span class="hljs-selector-tag">body</span></span><br>    #app<br><span class="hljs-tag">    %<span class="hljs-selector-tag">script</span>(<span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/react/16.9.0/umd/react.production.min.js&quot;</span> )</span><br><span class="hljs-tag">    %<span class="hljs-selector-tag">script</span>(<span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js&quot;</span> )</span><br><span class="hljs-tag">    %<span class="hljs-selector-tag">script</span>(<span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js&quot;</span> )</span><br><span class="hljs-tag">    %<span class="hljs-selector-tag">script</span>(<span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js&quot;</span> )</span><br><span class="hljs-tag">    %<span class="hljs-selector-tag">script</span>(<span class="hljs-attr">src</span>=<span class="hljs-string">&quot;script.js&quot;</span> )</span><br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li>  本代码由<strong>Haml</strong>编写</li>
+<li>  添加库的时候，同时把<strong>React</strong>和<strong>React-DOM</strong>都加上</li>
+<li>  这次渲染Markdown使用了GitHub上的<a target="_blank" rel="noopener" href="https://github.com/markedjs/marked"><strong>Marked</strong></a>项目</li>
+<li>  倒数第二个是<strong>freeCodeCamp</strong>的项目测评库</li>
+<li>  其他没啥可讲的，都是基本功</li>
+</ul>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><figure class="highlight scss"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs scss"><span class="hljs-keyword">@import</span> url(<span class="hljs-string">&quot;https://fonts.googleapis.com/css?family=Russo+One&quot;</span>);<br><span class="hljs-keyword">@import</span> url(<span class="hljs-string">&quot;https://fonts.font.im/css?family=Quantico&quot;</span>);<br><br><span class="hljs-variable">$darkAccent</span>: <span class="hljs-number">#09d5da</span>;<br><span class="hljs-variable">$lightAccent</span>: <span class="hljs-number">#2cda9d</span>;<br><span class="hljs-variable">$backgroundBase</span>: <span class="hljs-number">#5368a4</span>;<br><br><span class="hljs-variable">$shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">15px</span> <span class="hljs-number">8px</span> darken(<span class="hljs-variable">$backgroundBase</span>, <span class="hljs-number">20%</span>);<br><span class="hljs-variable">$default-border</span>: <span class="hljs-number">1px</span> solid darken(<span class="hljs-variable">$backgroundBase</span>, <span class="hljs-number">35%</span>);<br><br><span class="hljs-selector-tag">body</span> &#123;<br>    <span class="hljs-attribute">background</span>: url(<span class="hljs-string">&quot;https://i.loli.net/2019/08/14/GSTWDn2sqt3YL17.jpg&quot;</span>) fixed;<br>    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">100%</span>;<br>&#125;<br><br><span class="hljs-selector-class">.colorScheme</span> &#123;<br>    <span class="hljs-attribute">background-color</span>: lighten(<span class="hljs-variable">$backgroundBase</span>, <span class="hljs-number">30%</span>);<br>    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow</span>;<br>    <span class="hljs-attribute">border-top-style</span>: none;<br>&#125;<br><br><span class="hljs-selector-class">.toolbar</span> &#123;<br>    <span class="hljs-attribute">position</span>: relative;<br>    <span class="hljs-attribute">background-color</span>: lighten(<span class="hljs-variable">$darkAccent</span>, <span class="hljs-number">25%</span>);<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">4px</span> <span class="hljs-number">4px</span> <span class="hljs-number">3px</span> <span class="hljs-number">3px</span>;<br>    <span class="hljs-attribute">border</span>: <span class="hljs-variable">$default-border</span>;<br>    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow</span>;<br>    <span class="hljs-attribute">font-family</span>: Russo One, sans-serif;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">15px</span>;<br>    <span class="hljs-selector-tag">i</span> &#123;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">25px</span>;<br>        <span class="hljs-attribute">color</span>: black;<br>        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">5px</span>;<br>    &#125;<br>    <span class="hljs-selector-class">.fa-compress</span>,<br>    <span class="hljs-selector-class">.fa-expand</span> &#123;<br>        <span class="hljs-attribute">position</span>: absolute;<br>        <span class="hljs-attribute">right</span>: -<span class="hljs-number">5px</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-selector-class">.fa-compress</span>,<br><span class="hljs-selector-class">.fa-expand</span> &#123;<br>    &amp;<span class="hljs-selector-pseudo">:hover</span> &#123;<br>        <span class="hljs-attribute">animation</span>: btn <span class="hljs-number">0.5s</span>;<br>        <span class="hljs-attribute">animation-fill-mode</span>: forwards;<br>        <span class="hljs-attribute">cursor</span>: pointer;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">@keyframes</span> btn &#123;<br>    100% &#123;<br>        <span class="hljs-attribute">color</span>: lighten(<span class="hljs-variable">$lightAccent</span>, <span class="hljs-number">10%</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-selector-class">.fa-chess</span> &#123;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">3px</span>;<br>&#125;<br><br><span class="hljs-selector-class">.editorWrap</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">18px</span> auto;<br>    <span class="hljs-selector-class">.toolbar</span> &#123;<br>        <span class="hljs-attribute">position</span>: relative;<br>        <span class="hljs-attribute">right</span>: <span class="hljs-number">18px</span>;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">36px</span>;<br>        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;<br>    &#125;<br>    <span class="hljs-selector-tag">textarea</span> &#123;<br>        <span class="hljs-keyword">@extend</span> .colorScheme;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">98.5%</span>;<br>        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1vw</span>;<br>        <span class="hljs-attribute">min-height</span>: <span class="hljs-number">60vh</span>;<br>        <span class="hljs-attribute">margin-bottom</span>: -<span class="hljs-number">5px</span>;<br>        <span class="hljs-attribute">resize</span>: vertical;<br>        <span class="hljs-attribute">outline</span>: none;<br>        <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">5px</span>;<br>        <span class="hljs-attribute">font-family</span>: Quantico, sans-serif;<br>        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">15px</span>;<br>        <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-number">20px</span>;<br>        <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-number">20px</span>;<br>        &amp;::-webkit-scrollbar &#123; width: <span class="hljs-number">0</span> &#125;;<br>    &#125;<br>&#125;<br><br><span class="hljs-selector-class">.previewWrap</span> &#123;<br>    <span class="hljs-keyword">@extend</span> .colorScheme;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">800px</span>;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span> auto;<br>    <span class="hljs-attribute">overflow-wrap</span>: break-word;<br>    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">20px</span>;<br>    <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-number">25px</span>;<br>    <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-number">25px</span>;<br>    <span class="hljs-selector-class">.toolbar</span> &#123;<br>        <span class="hljs-attribute">position</span>: relative;<br>        <span class="hljs-attribute">right</span>: <span class="hljs-number">12px</span>;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">36px</span>;<br>        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;<br>    &#125;<br>    <span class="hljs-selector-id">#preview</span> &#123;<br>        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">5px</span>;<br>        <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">10px</span>;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">98.5%</span>;<br>        <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-number">25px</span>;<br>        <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-number">25px</span>;<br>        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1vw</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (max-width: <span class="hljs-number">850px</span>) &#123;<br>    <span class="hljs-selector-class">.previewWrap</span> &#123;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">630px</span>;<br>    &#125;<br>    <span class="hljs-selector-class">.editorWrap</span> &#123;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">550px</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-selector-class">.maximized</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">90%</span>;<br>    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">90vh</span>;<br>    <span class="hljs-attribute">margin</span>: auto;<br>    <span class="hljs-selector-tag">textarea</span> &#123;<br>        <span class="hljs-attribute">min-height</span>: <span class="hljs-number">90vh</span>;<br>        <span class="hljs-attribute">resize</span>: none;<br>    &#125;<br>&#125;<br><br><span class="hljs-selector-class">.hide</span> &#123;<br>    <span class="hljs-attribute">display</span>: none;<br>&#125;<br><br><span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (max-width: <span class="hljs-number">650px</span>) &#123;<br>    <span class="hljs-selector-tag">body</span> &#123;<br>        <span class="hljs-attribute">margin</span>: <span class="hljs-number">5px</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    <span class="hljs-selector-class">.editorWrap</span> &#123;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">80vw</span>;<br>        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;<br>    &#125;<br>    <span class="hljs-selector-class">.maximized</span> &#123;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">90%</span>;<br>        <span class="hljs-attribute">margin</span>: auto;<br>    &#125;<br>    <span class="hljs-selector-class">.previewWrap</span> &#123;<br>        <span class="hljs-attribute">width</span>: <span class="hljs-number">90vw</span>;<br>        <span class="hljs-selector-id">#preview</span> &#123;<br>            <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>            <span class="hljs-selector-tag">img</span> &#123;<br>                <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// MARKDOWN STYLES</span><br><span class="hljs-selector-id">#preview</span> &#123;<br>    <span class="hljs-selector-tag">blockquote</span> &#123;<br>        <span class="hljs-attribute">border-left</span>: <span class="hljs-number">3px</span> solid <span class="hljs-number">#224b4b</span>;<br>        <span class="hljs-attribute">color</span>: <span class="hljs-number">#224b4b</span>;<br>        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">5px</span>;<br>        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">25px</span>;<br>    &#125;<br><br>    <span class="hljs-selector-tag">code</span> &#123;<br>        <span class="hljs-attribute">background</span>: rgba(<span class="hljs-number">9</span>, <span class="hljs-number">250</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.31</span>);<br>        <span class="hljs-attribute">padding</span>: <span class="hljs-number">1px</span> <span class="hljs-number">4px</span> <span class="hljs-number">2px</span> <span class="hljs-number">4px</span>;<br>        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;<br>        <span class="hljs-attribute">font-weight</span>: bold;<br>    &#125;<br><br>    <span class="hljs-selector-tag">pre</span> &#123;<br>        <span class="hljs-attribute">background</span>: white;<br>        <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">5px</span>;<br>    &#125;<br><br>    <span class="hljs-selector-tag">h1</span> &#123;<br>        <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$darkAccent</span>;<br>    &#125;<br><br>    <span class="hljs-selector-tag">h2</span> &#123;<br>        <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$darkAccent</span>;<br>    &#125;<br><br>    <span class="hljs-selector-tag">table</span> &#123;<br>        <span class="hljs-attribute">border-collapse</span>: collapse;<br>    &#125;<br><br>    <span class="hljs-selector-tag">td</span>,<br>    <span class="hljs-selector-tag">th</span> &#123;<br>        <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$darkAccent</span>;<br>        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">5px</span>;<br>        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">5px</span>;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li>  <code>&amp;::-webkit-scrollbar &#123; width: 0 &#125;;</code>这行代码<strong>隐藏了编辑框滚动条</strong>，该特性是<strong>非标准</strong>的，请尽量不要在生产环境中使用它！</li>
+<li>  最后的Markdown预览框渲染的标签由<strong>Marked</strong>项目自动生成，这里只是添加了一点点渲染改进</li>
+</ul>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><figure class="highlight plain"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs react">marked.setOptions(&#123;<br>    breaks: true,<br>    smartLists: true<br>&#125;);<br>const placeholder &#x3D; &#96;# Welcome to my React Markdown Previewer!<br><br>## This is a sub-heading...<br>### And here&#39;s some other cool stuff:<br>  <br>Heres some code, \&#96;&lt;div&gt;&lt;&#x2F;div&gt;\&#96;, between 2 backticks.<br><br>\&#96;\&#96;\&#96;<br>&#x2F;&#x2F; this is multi-line code:<br><br>function anotherExample(firstLine, lastLine) &#123;<br>  if (firstLine &#x3D;&#x3D; &#39;\&#96;\&#96;\&#96;&#39; &amp;&amp; lastLine &#x3D;&#x3D; &#39;\&#96;\&#96;\&#96;&#39;) &#123;<br>    return multiLineCode;<br>  &#125;<br>&#125;<br>\&#96;\&#96;\&#96;<br>  <br>You can also make text **bold**... whoa!<br>Or _italic_.<br>Or... wait for it... **_both!_**<br>And feel free to go crazy ~~crossing stuff out~~.<br><br>There&#39;s also [links](https:&#x2F;&#x2F;www.freecodecamp.com), and<br>&gt; Block Quotes!<br><br>And if you want to get really crazy, even tables:<br><br>Wild Header | Crazy Header | Another Header?<br>------------ | ------------- | ------------- <br>Your content can | be here, and it | can be here....<br>And here. | Okay. | I think we get it.<br><br>- And of course there are lists.<br>  - Some are bulleted.<br>     - With different indentation levels.<br>        - That look like this.<br><br><br>1. And there are numbererd lists too.<br>1. Use just 1s if you want! <br>1. But the list goes on...<br>- Even if you use dashes or asterisks.<br>* And last but not least, let&#39;s not forget embedded images:<br><br>![React Logo w&#x2F; Text](https:&#x2F;&#x2F;goo.gl&#x2F;Umyytc)<br>&#96;;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li>  <code>marked.setOptions()</code>里面是<strong>Marked</strong>的配置代码</li>
+<li>  <code>placeholder</code>里面是<strong>默认</strong>的输入待转化字符</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs react">const Toolbar &#x3D; (props) &#x3D;&gt; &#123;<br>  return (<br>      &lt;div className&#x3D;&quot;toolbar&quot;&gt;<br>          &lt;i className&#x3D;&quot;fas fa-chess&quot; &#x2F;&gt;<br>          &#123;props.text&#125;<br>          &lt;i onClick&#x3D;&#123;props.onClick&#125; className&#x3D;&#123;props.icon&#125; &#x2F;&gt;<br>      &lt;&#x2F;div&gt;<br>  );<br>&#125;;<br>const Editor &#x3D; (props) &#x3D;&gt; &#123;<br>    return (<br>        &lt;textarea<br>            id&#x3D;&quot;editor&quot;<br>            value&#x3D;&#123;props.markdown&#125;<br>            onChange&#x3D;&#123;props.onChange&#125;<br>        &#x2F;&gt;<br>    );<br>&#125;;<br>const Preview &#x3D; (props) &#x3D;&gt; &#123;<br>    return (<br>        &lt;div<br>            id&#x3D;&quot;preview&quot;<br>            dangerouslySetInnerHTML&#x3D;&#123;&#123;<br>                __html: marked(props.markdown)<br>            &#125;&#125;<br>        &#x2F;&gt;<br>    );<br>&#125;;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li>  这部分<strong>抽离</strong>了一些React组件</li>
+<li>  <code>dangerouslySetInnerHTML={{ __html: marked(props.markdown) }}</code>因为不合时宜的使用<code>innerHTML</code>可能会导致**cross-site scripting (XSS)**攻击。 净化用户的输入来显示的时候，经常会出现错误，不合适的净化也是导致网页攻击的原因之一。所以，<code>dangerouslySetInnerHTML</code>这个 prop 的命名是故意这么设计的，以此来警告，它的<code>prop</code>值（ 一个对象而不是字符串 ）应该被用来表明净化后的数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs react">class App extends React.Component &#123;<br>    constructor(props) &#123;<br>        super(props);<br>        this.state &#x3D; &#123;<br>            markdown: placeholder,<br>            editorMaximized: false,<br>            previewMaximized: false<br>        &#125;;<br>        this.handleChange &#x3D; this.handleChange.bind(this);<br>        this.handleEditorMaximize &#x3D; this.handleEditorMaximize.bind(this);<br>        this.handlePreviewMaximize &#x3D; this.handlePreviewMaximize.bind(this);<br>    &#125;<br>    handleChange(e) &#123;<br>        this.setState(&#123;<br>            markdown: e.target.value<br>        &#125;);<br>    &#125;<br>    handleEditorMaximize() &#123;<br>        this.setState((prevState) &#x3D;&gt; &#123;<br>            return &#123;editorMaximized: !prevState.editorMaximized&#125;;<br>        &#125;);<br>    &#125;<br>    handlePreviewMaximize() &#123;<br>        this.setState((prevState) &#x3D;&gt; &#123;<br>            return &#123;previewMaximized: !prevState.previewMaximized&#125;;<br>        &#125;);<br>    &#125;<br>    render() &#123;<br>        const classes &#x3D; this.state.editorMaximized<br>            ? [&quot;editorWrap maximized&quot;, &quot;previewWrap hide&quot;, &quot;fas fa-compress&quot;]<br>            : this.state.previewMaximized<br>                ? [&quot;editorWrap hide&quot;, &quot;previewWrap maximized&quot;, &quot;fas fa-compress&quot;]<br>                : [&quot;editorWrap&quot;, &quot;previewWrap&quot;, &quot;fas fa-expand&quot;];<br>        return (<br>            &lt;div&gt;<br>                &lt;div className&#x3D;&#123;classes[0]&#125;&gt;<br>                    &lt;Toolbar<br>                        icon&#x3D;&#123;classes[2]&#125;<br>                        onClick&#x3D;&#123;this.handleEditorMaximize&#125;<br>                        text&#x3D;&quot;MaverickNone&#39;s Editor&quot;<br>                    &#x2F;&gt;<br>                    &lt;Editor<br>                        markdown&#x3D;&#123;this.state.markdown&#125;<br>                        onChange&#x3D;&#123;this.handleChange&#125;<br>                    &#x2F;&gt;<br>                &lt;&#x2F;div&gt;<br>                &lt;div className&#x3D;&#123;classes[1]&#125;&gt;<br>                    &lt;Toolbar<br>                        icon&#x3D;&#123;classes[2]&#125;<br>                        onClick&#x3D;&#123;this.handlePreviewMaximize&#125;<br>                        text&#x3D;&quot;MaverickNone&#39;s Previewer&quot;<br>                    &#x2F;&gt;<br>                    &lt;Preview markdown&#x3D;&#123;this.state.markdown&#125; &#x2F;&gt;<br>                &lt;&#x2F;div&gt;<br>            &lt;&#x2F;div&gt;<br>        );<br>    &#125;<br>&#125;<br><br>ReactDOM.render(&lt;App &#x2F;&gt;, document.getElementById(&quot;app&quot;));<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li>  这里使用了<strong>三目运算符</strong>，根据React保存的状态来判断是隐藏还是显示某组件（通过选择<strong>class</strong>的方式），工具栏应该用什么<strong>图标</strong></li>
+<li>  三目运算符后面的<strong>数组</strong>用的非常巧妙，应该注意一下</li>
+</ul>
+<hr>
+<h2 id="项目总结"><a href="#项目总结" class="headerlink" title="项目总结"></a>项目总结</h2><ol>
+<li> 这次项目深化了<strong>React</strong>的<strong>熟练度</strong>，以及如何配合React来<strong>动态渲染CSS</strong>（比如：如何隐藏组件）</li>
+<li> 练习了React的代码风格之一，<strong>组件抽离</strong></li>
+<li> 这次尝试使用了<a target="_blank" rel="noopener" href="https://github.com/markedjs/marked"><strong>Marked</strong></a>项目，该项目非常好用，值得推荐和收藏</li>
+<li> 学习了如何<strong>隐藏滚动条</strong></li>
+</ol>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E6%83%85%E6%8A%A5/">技术情报</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/freeCodeCamp/">freeCodeCamp</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BB%A3%E7%A0%81-%E9%A1%B9%E7%9B%AE/">代码 & 项目</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/837ea377/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">前端高质量资源大全</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/8c7a6033/">
+                        <span class="hidden-mobile">freeCodeCamp Certification [02]</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

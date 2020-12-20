@@ -1,0 +1,671 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#004a6d">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>进阶篇 VII [CAN] ~ Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":35,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Alchemic Ronin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/post.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="进阶篇 VII [CAN]">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-03-29 22:45" pubdate>
+        March 29, 2020 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      63
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">进阶篇 VII [CAN]</h1>
+            
+            <div class="markdown-body">
+              <iframe
+    frameborder="no"
+    border="0"
+    marginwidth="0"
+    marginheight="0"
+    width="100%"
+    height="86"
+    src="https://music.163.com/outchain/player?type=2&id=26625301&auto=1&height=66">
+</iframe>
+
+<p><strong>项目&amp;教程仓库</strong>：<a target="_blank" rel="noopener" href="https://github.com/AlchemicRonin/-STM32-RoboMaster-">-STM32-RoboMaster-</a></p>
+<hr>
+<h2 id="1-0-什么是CAN"><a href="#1-0-什么是CAN" class="headerlink" title="1.0 什么是CAN?"></a>1.0 什么是CAN?</h2><h3 id="1-1-背景-定义"><a href="#1-1-背景-定义" class="headerlink" title="1.1 背景 + 定义"></a>1.1 背景 + 定义</h3><blockquote>
+<p><strong>Controller Area Network 控制器局域网络</strong> 是ISO国际标准化的串行通信协议。在汽车产业中，出于对安全性、舒适性、方便性、低公害、低成本的要求，各种各样的电子控制系统被开发了出来。由于这些系统之间通信所用的数据类型及对可靠性的要求不尽相同，由多条总线构成的情况很多，线束的数量也随之增加。为适应“减少线束的数量”、“通过多个LAN，进行大量数据的高速通信”的需要，1986 年德国电气商博世公司开发出面向汽车的CAN 通信协议。此后，CAN 通过ISO11898及ISO11519进行了标准化，在欧洲已是汽车网络的标准协议。</p>
+<p>CAN 的高性能和可靠性已被认同，并被广泛地应用于工业自动化、船舶、医疗设备、工业设备等方面。现场总线是当今自动化领域技术发展的热点之一，被誉为自动化领域的计算机局域网。它的出现为分布式控制系统实现各节点之间实时、可靠的数据通信提供了强有力的技术支持。近年来，它具有的高可靠性和良好的错误检测能力受到重视，被广泛应用于汽车计算机控制系统和环境温度恶劣、电磁辐射强及振动大的工业环境。</p>
+</blockquote>
+<h3 id="1-2-意义-优势"><a href="#1-2-意义-优势" class="headerlink" title="1.2 意义 + 优势"></a>1.2 意义 + 优势</h3><blockquote>
+<ol>
+<li><strong>多主控制</strong><ul>
+<li>在总线空闲时，所有的单元都可开始发送消息（多主控制）</li>
+<li>最先访问总线的单元可获得发送权（CSMA/CA力式）</li>
+<li>多个单元同时开始发送时，发送高优先级 ID 消息的单元可获得发送权</li>
+</ul>
+</li>
+<li><strong>消息的发送</strong><ul>
+<li>在CAN协议中，所有的消息都以固定的格式发送。总线空闲时，所有与总线相连的单元都可开始发送新消息。两个以上的单元同时开始发送消息时，根据标识符（Identifier以下称为ID）决定优先级。ID并不是表示发送的目的地址，而是表示访问总线的消息的优先级。两个以上的单元同时开始发送消息时，对各消息ID的每个位进行逐个仲裁比较。仲裁获胜（被判定为优先级最高）的单元可继续发送消息。仲裁失利的单元则立刻停止发送而进行接收工作。</li>
+</ul>
+</li>
+<li><strong>系统的柔软性</strong><ul>
+<li>与总线相连的单元没有类似于“地址”的信息。因此在总线上增加单元时，连接在总线上的其他单元的软硬件及应用层都不需要改变。</li>
+</ul>
+</li>
+<li><strong>通信速度</strong><ul>
+<li>根据整个网络的规模，可设定适合的通信速度。在同一网络中，所有单元必须设定成统一的通信速度。即使有一个单元的通信速度与其它的不一样。此单元也会输出错误信号，妨碍整个网络的通信。不同网络间则可以有不同的通信速度。</li>
+</ul>
+</li>
+<li><strong>远程数据请求</strong><ul>
+<li>可通过发送“遥控帧”，请求其他单元发送数据。</li>
+</ul>
+</li>
+<li><strong>错误检测功能</strong><ul>
+<li>所有的单元都可以检测错误（错误检测功能）</li>
+<li>检测出错误的单元会立即同时通知其他所有单元（错误通知功能）</li>
+<li>正在发送消息的单元一旦检测出错误，会强制结束当前的发送。强制结束发送的单元会不断反复地重新发送此消息直到成功发送为止（错误恢复功能）</li>
+</ul>
+</li>
+<li><strong>故障封闭</strong><ul>
+<li>CAN可以判断出错误的类型是总线上暂时的数据错误（如外部噪声等）还是持续的数据错误（如单元内部故障、驱动器故障、断线等）。由此功能，当总线上发生持续数据错误时，可将引起此故障的单元从总线上隔离出去。</li>
+</ul>
+</li>
+<li><strong>连接</strong><ul>
+<li>CAN总线是可同时连接多个单元的总线。可连接的单元总数理论上是没有限制的。但实际上可连接的单元数受总线上的时间延迟及电气负载的限制。降低通信速度，可连接的单元数增加：提高通信速度，则可连接的单元数减少。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="2-0-CAN原理"><a href="#2-0-CAN原理" class="headerlink" title="2.0 CAN原理"></a>2.0 CAN原理</h2><h3 id="2-1-Differential-signal-差分信号"><a href="#2-1-Differential-signal-差分信号" class="headerlink" title="2.1  Differential signal 差分信号"></a>2.1  Differential signal 差分信号</h3><p><img src="https://i.loli.net/2020/03/30/rmacW45kE8Y13T2.jpg" srcset="/img/loading.gif" alt="ISO11898-2.jpg"></p>
+<p>从上图我们可以看到，与图中下部分的普通信号不同，并不是低电平表示0高电平表示1，而是当两根数据线在同一时刻，如果有电压差表示0无电压差表示1。</p>
+<p>相对于单信号线传输的方式，使用差分信号传输具有如下优点：</p>
+<ul>
+<li><strong>抗干扰能力强</strong>：当外界存在噪声干扰时，几乎会同时耦合到两条信号线上，而接收端只关心两个信号的差值，所以外界的共模噪声可以被完全抵消。</li>
+<li><strong>有效抑制电磁干扰</strong>：同样的道理，由于两根信号的极性相反，他们对外辐射的电磁场可以相互抵消，耦合的越紧密，泄放到外界的电磁能量越少。</li>
+<li><strong>时序定位精确</strong>：由于差分信号的开关变化是位于两个信号的交点，而不像普通单端信号依靠高低两个阈值电压判断，因而受工艺，温度的影响小，能降低时序上的误差，同时也更适合于低幅度信号的电路</li>
+</ul>
+<p>由于差分信号线具有这些优点，所以在USB协议，485 协议，以太网协议，及 CAN 协议的物理层中，都使用了差分信号传输。</p>
+<p><img src="https://i.loli.net/2020/03/30/pRTdzBhxfG6YvEL.png" srcset="/img/loading.gif" alt="CAN node.png"></p>
+<p>虽然CAN是通过差分信号传输数据，但是MCU不是，所以需要CAN Transceiver来把MCU的普通信号转换成差分信号。STM32并不自己提供该功能，所以需要外接CAN Transceiver。</p>
+<h3 id="2-2-Time-Quantum-时间量子"><a href="#2-2-Time-Quantum-时间量子" class="headerlink" title="2.2 Time Quantum 时间量子"></a>2.2 Time Quantum 时间量子</h3><ul>
+<li>数据的每一Bit位，都分为4段<ul>
+<li>同步段 ( SS / Sync )</li>
+<li>传播时间段 ( PTS / Prop )</li>
+<li>相位缓冲段 1 ( PBS1 / Phase 1 )</li>
+<li>相位缓冲段 2 ( PBS2 / Phase 2 )</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2020/03/30/xNarijqgA28Mf95.jpg" srcset="/img/loading.gif" alt="CAN_Bit_Timing2.jpg"></p>
+<ul>
+<li>而这每一段又由称为Time Quantum 时间量子的最小时间单位组成</li>
+</ul>
+<h3 id="2-3-Data-Frame-数据帧"><a href="#2-3-Data-Frame-数据帧" class="headerlink" title="2.3 Data Frame 数据帧"></a>2.3 Data Frame 数据帧</h3><p>在CAN标准中，分为标准格式和扩展格式，而帧也分为5种</p>
+<ul>
+<li><strong>数据帧</strong></li>
+<li>遥控帧</li>
+<li>错误帧</li>
+<li>过载帧</li>
+<li>间隔帧</li>
+</ul>
+<p>我们这里主要解析一下数据帧</p>
+<p><img src="https://i.loli.net/2020/03/30/xLAM7N31Dh2keVd.jpg" srcset="/img/loading.gif" alt="CAN-Bus-frame_in_base_format_without_stuffbits_1.jpg"></p>
+<p>每个数据帧总共包含7个段</p>
+<ol>
+<li><strong>Start of Frame 帧起始</strong>：表示数据帧开始的段</li>
+<li><strong>Arbitration Field 仲裁段</strong>：表示该帧优先级的段</li>
+<li><strong>Control 控制段</strong>：表示数据的字节数及保留位的段</li>
+<li><strong>Data 数据段</strong>：数据的内容，一帧可发送 0~8 个字节的数据</li>
+<li><strong>CRC Field CRC段</strong>：检查帧的传输错误的段</li>
+<li><strong>ACK Field ACK段</strong>：表示确认正常接收的段</li>
+<li><strong>End of Frame 帧结束</strong>：表示数据帧结束的段</li>
+</ol>
+<h3 id="2-4-Arbitration-仲裁"><a href="#2-4-Arbitration-仲裁" class="headerlink" title="2.4 Arbitration 仲裁"></a>2.4 Arbitration 仲裁</h3><p><img src="https://i.loli.net/2020/03/30/DfN6Ws4jcUumnY9.jpg" srcset="/img/loading.gif" alt="arbitration.jpg"></p>
+<p>在CAN中，仲裁是为了解决当同一时刻有多个Node在试图发送信息的时候，让优先权最大的那个Node先发。在CAN中，1是隐性电平，0是显性电平，在ID中显性电平越靠前越多，也就是ID越小，优先权越大。在仲裁的时候，比如有上图中的3个Node同时发送数据，当他们同时发送帧ID的时候，CAN的特性之一就会起作用，<strong>隐性电平会被显性电平覆盖</strong>，也就是只要在同一时刻，CAN上既有Node发送隐性电平又有Node发送显性电平，那CAN上就只有显性电平，反过来说，只有当CAN上所有Node都只发送隐性电平的时候，CAN上才是隐性电平。这就是仲裁机制背后的物理机制。</p>
+<p>然后接下来，我们继续谈谈仲裁的过程中到底发生了什么，继续上图的例子，在时刻5的时候，Node 2是隐性电平 ( 1 ) ，而其他Node是显性电平 ( 0 ) ，所以整个CAN上也是显性电平 ( 0 ) ，然后Node 2自己一对比自己的输入输出不同，很自觉得知道自己优先权比其他Node低，然后停止发送数据，转为监听模式，Node 1和Node 3继续仲裁。在时刻2的时候，Node 1是隐性电平 ( 1 ) ，而Node 3是显性电平 ( 0 ) ，所以Node 1也转为监听模式，最后当整个ID发送完，仲裁完成后，只有Node 3发现自己没事，就知道自己是优先权最大的那个，接下来就继续发送数据帧，而其他Node就暂停发送数据，一直监听Node 3的数据，直到Node 3发完数据，其他Node再继续仲裁下去，决定接下来的发送权。</p>
+<h2 id="3-0-STM32的CAN配置原理"><a href="#3-0-STM32的CAN配置原理" class="headerlink" title="3.0 STM32的CAN配置原理"></a>3.0 STM32的CAN配置原理</h2><h3 id="3-1-图解CAN内部实现机构"><a href="#3-1-图解CAN内部实现机构" class="headerlink" title="3.1 图解CAN内部实现机构"></a>3.1 图解CAN内部实现机构</h3><p><img src="https://i.loli.net/2020/03/30/Wu1C8gAadiDZv79.jpg" srcset="/img/loading.gif" alt="Reference-Manual-1079.jpg"></p>
+<p>从图上我们可以看到，CAN 1与CAN 2为主从关系，CAN 1为Master ( 主 ) ，CAN 2为Slave ( 从 ) 。CAN 1和CAN 2有各自的3个发送邮箱，2个FIFO Buffer缓冲，6个接收邮箱。但是，28个Filter 过滤器却是共用的，我们可以规定，哪些Filter给那个CAN用，甚至可以在程序运行的时候调控。</p>
+<p><img src="https://i.loli.net/2020/03/30/hHmq1MaRX2p7Q5d.png" srcset="/img/loading.gif" alt="Transmit Mailbox.png"></p>
+<p><img src="https://i.loli.net/2020/03/30/AoPq8lhRLzgwvyI.png" srcset="/img/loading.gif" alt="Receive Mailbox.png"></p>
+<p>上面俩图是发送邮箱和接收邮箱的具体的流程和机制。具体的细节就实在太多了，本文毕竟不是参考手册，想更加深入的看官，可以去ST官方的<em>Reference Manual</em>查阅具体细节。</p>
+<h3 id="3-2-Filter-过滤器"><a href="#3-2-Filter-过滤器" class="headerlink" title="3.2 Filter 过滤器"></a>3.2 Filter 过滤器</h3><p>Filter 过滤器就很简单了，就是过滤接收到的每一帧的ID，如果符合特定条件，那就将该帧放入接收FIFO中。</p>
+<p>Filter 过滤器有两种模式：</p>
+<ol>
+<li><strong>Identifier List Mode 标识符列表模式</strong>：它把要接收报文的 ID 列成一个表，要求报文 ID 与列表中的某一个标识符完全相同才可以接收，可以理解为白名单管理</li>
+<li><strong>Mask Mode 掩码模式</strong>：它把可接收报文 ID 的某几位作为列表，这几位被称为掩码，可以把它理解成关键字搜索，只要掩码(关键字)相同，就符合要求，报文就会被保存到接收FIFO</li>
+</ol>
+<p><img src="https://i.loli.net/2020/03/30/n6UpCBElg8bjW79.png" srcset="/img/loading.gif" alt="CAN Mask.png"></p>
+<p>每种模式又有对应的16 Bit位，32 Bit位模式，具体的使用方法和区别，本文不深入讨论，这部分内容再出个完整的教程都足够了，所以这部分留给客官去看<em>Reference Manuel</em>来理解。</p>
+<h3 id="3-3-如何通过Bit-Rate-比特率来选择Time-Quantum-时间量子"><a href="#3-3-如何通过Bit-Rate-比特率来选择Time-Quantum-时间量子" class="headerlink" title="3.3 如何通过Bit Rate 比特率来选择Time Quantum 时间量子"></a>3.3 如何通过Bit Rate 比特率来选择Time Quantum 时间量子</h3><p><img src="https://i.loli.net/2020/03/30/4r3nTE92bmPzxqK.png" srcset="/img/loading.gif" alt="CAN for STM32.png"></p>
+<p>该图生成于<a target="_blank" rel="noopener" href="http://www.bittiming.can-wiki.info/">CAN Bit Time Calculation</a>，可以看出在iRM2018的时钟树配置下，42MHz的CAN总线，最推荐的是黄色的那条，是稳定和高速的交际范围，越往上越快，但是越不稳定，越往下越稳定，但是越慢。因为C620电调和M3508电机接收的比特率是1Mbps，所以我们只能选择最上面的那个最快的那组参数。</p>
+<h3 id="3-4-特殊功能选项"><a href="#3-4-特殊功能选项" class="headerlink" title="3.4 特殊功能选项"></a>3.4 特殊功能选项</h3><ul>
+<li><strong>Automatic Bus-Off Management 自动离线管理</strong>：可以在出错时离线后适时自动恢复，不需要软件干预</li>
+<li><strong>Automatic Retransmission 自动重传</strong>：使用本功能时，会一直发送报文直到成功为止</li>
+</ul>
+<h3 id="3-5-RoboMaster-Assistant"><a href="#3-5-RoboMaster-Assistant" class="headerlink" title="3.5 RoboMaster Assistant"></a>3.5 RoboMaster Assistant</h3><p>在用串口转接器后，可以在PWM接口连接上PC的RoboMaster Assitant来调试电机，重要的是可以调整电机的CAN数据发送频率，适当调低可以降低CPU的接收压力，把计算资源留给其他更加重要的功能。</p>
+<h3 id="3-6-终端电阻"><a href="#3-6-终端电阻" class="headerlink" title="3.6 终端电阻"></a>3.6 终端电阻</h3><p>在C620电调的侧翼，有个开关，用于是否开启终端电阻。这个电阻是一定要开的，因为CAN总线的任何终端，任何Node 节点，都需要在两根线中间接$120\ Ω$的电阻。</p>
+<h2 id="4-0-CAN的用法"><a href="#4-0-CAN的用法" class="headerlink" title="4.0 CAN的用法"></a>4.0 CAN的用法</h2><figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-function">HAL_StatusTypeDef <span class="hljs-title">HAL_CAN_ActivateNotification</span><span class="hljs-params">(CAN_HandleTypeDef *hcan, <span class="hljs-keyword">uint32_t</span> ActiveITs)</span></span>;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li><strong>参数</strong><ul>
+<li><code>hcan</code>：指向CAN配置结构体</li>
+<li><code>ActiveITs</code>：表明哪个中断会被启动，开启改中断的消息提示</li>
+</ul>
+</li>
+<li><strong>返回值</strong><ul>
+<li><code>HAL_StatusTypeDef</code>：如果开启成功，返回<code>HAL_OK</code>；如果失败，返回<code>HAL_ERROR</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-function">HAL_StatusTypeDef <span class="hljs-title">HAL_CAN_Start</span><span class="hljs-params">(CAN_HandleTypeDef *hcan)</span></span>;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li><strong>参数</strong><ul>
+<li><code>hcan</code>：指向CAN配置结构体</li>
+</ul>
+</li>
+<li><strong>返回值</strong><ul>
+<li><code>HAL_StatusTypeDef</code>：如果开启成功，返回<code>HAL_OK</code>；如果失败，返回<code>HAL_ERROR</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-function">HAL_StatusTypeDef <span class="hljs-title">HAL_CAN_ConfigFilter</span><span class="hljs-params">(CAN_HandleTypeDef *hcan, CAN_FilterTypeDef *sFilterConfig)</span></span>;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li><strong>参数</strong><ul>
+<li><code>hcan</code>：指向CAN配置结构体</li>
+<li><code>sFilterConfig</code>：指向Filter过滤器配置结构体</li>
+</ul>
+</li>
+<li><strong>返回值</strong><ul>
+<li><code>HAL_StatusTypeDef</code>：如果开启成功，返回<code>HAL_OK</code>；如果失败，返回<code>HAL_ERROR</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-function">HAL_StatusTypeDef <span class="hljs-title">HAL_CAN_AddTxMessage</span><span class="hljs-params">(CAN_HandleTypeDef *hcan, CAN_TxHeaderTypeDef *pHeader, <span class="hljs-keyword">uint8_t</span> aData[], <span class="hljs-keyword">uint32_t</span> *pTxMailbox)</span></span>;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li><strong>参数</strong><ul>
+<li><code>hcan</code>：指向CAN配置结构体</li>
+<li><code>pHeader</code>：指向发送数据的配置结构体</li>
+<li><code>aData[]</code>：指向需要发送的数据</li>
+<li><code>pTxMailbox</code>：该函数会返回用于储存发送数据的发送邮箱编号到该变量</li>
+</ul>
+</li>
+<li><strong>返回值</strong><ul>
+<li><code>HAL_StatusTypeDef</code>：如果添加成功，返回<code>HAL_OK</code>；如果失败，返回<code>HAL_ERROR</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">uint32_t</span> <span class="hljs-title">HAL_CAN_IsTxMessagePending</span><span class="hljs-params">(CAN_HandleTypeDef *hcan, <span class="hljs-keyword">uint32_t</span> TxMailboxes)</span></span>;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li><strong>参数</strong><ul>
+<li><code>hcan</code>：指向CAN配置结构体</li>
+<li><code>TxMailboxes</code>：指向发送数据的发送邮箱</li>
+</ul>
+</li>
+<li><strong>返回值</strong><ul>
+<li><code>uint32_t</code>：如果有发送数据正在等待发送，返回<code>1</code>；如果没有，返回<code>0</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_CAN_RxFifo0MsgPendingCallback</span><span class="hljs-params">(CAN_HandleTypeDef *hcan)</span></span>;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li>在写代码的时候，在<code>main.c</code>中创建<code>HAL_CAN_RxFifo0MsgPendingCallback</code>函数</li>
+<li>在该函数中填写在FIFO 0中已经没有正在等待接收的数据的时候开启中断，需要执行的代码</li>
+</ul>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-function">HAL_StatusTypeDef <span class="hljs-title">HAL_CAN_GetRxMessage</span><span class="hljs-params">(CAN_HandleTypeDef *hcan, <span class="hljs-keyword">uint32_t</span> RxFifo, CAN_RxHeaderTypeDef *pHeader, <span class="hljs-keyword">uint8_t</span> aData[])</span></span>;<br></code></pre></div></td></tr></table></figure>
+
+<ul>
+<li><strong>参数</strong><ul>
+<li><code>hcan</code>：指向CAN配置结构体</li>
+<li><code>RxFifo</code>：指向负责接收的FIFO</li>
+<li><code>pHeader</code>：指向接收数据的配置结构体</li>
+<li><code>aData[]</code>：指向需要接收的数据</li>
+</ul>
+</li>
+<li><strong>返回值</strong><ul>
+<li><code>HAL_StatusTypeDef</code>：如果接收成功，返回<code>HAL_OK</code>；如果失败，返回<code>HAL_ERROR</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="5-0-练习项目"><a href="#5-0-练习项目" class="headerlink" title="5.0 练习项目"></a>5.0 练习项目</h2><h3 id="5-1-项目简介"><a href="#5-1-项目简介" class="headerlink" title="5.1 项目简介"></a>5.1 项目简介</h3><ul>
+<li><strong>CAN电机控制与读取</strong>：通过CAN控制电机，并且在按下按钮时通过CAN读取电机运行数据</li>
+</ul>
+<h3 id="5-2-项目代码"><a href="#5-2-项目代码" class="headerlink" title="5.2 项目代码"></a>5.2 项目代码</h3><figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-comment">/* USER CODE BEGIN Header */</span><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  ******************************************************************************</span><br><span class="hljs-comment">  * @file           : main.c</span><br><span class="hljs-comment">  * @brief          : Main program body</span><br><span class="hljs-comment">  ******************************************************************************</span><br><span class="hljs-comment">  * @attention</span><br><span class="hljs-comment">  *</span><br><span class="hljs-comment">  * &lt;h2&gt;&lt;center&gt;&amp;copy; Copyright (c) 2020 STMicroelectronics.</span><br><span class="hljs-comment">  * All rights reserved.&lt;/center&gt;&lt;/h2&gt;</span><br><span class="hljs-comment">  *</span><br><span class="hljs-comment">  * This software component is licensed by ST under BSD 3-Clause license,</span><br><span class="hljs-comment">  * the &quot;License&quot;; You may not use this file except in compliance with the</span><br><span class="hljs-comment">  * License. You may obtain a copy of the License at:</span><br><span class="hljs-comment">  *                        opensource.org/licenses/BSD-3-Clause</span><br><span class="hljs-comment">  *</span><br><span class="hljs-comment">  ******************************************************************************</span><br><span class="hljs-comment">  */</span><br><span class="hljs-comment">/* USER CODE END Header */</span><br><br><span class="hljs-comment">/* Includes ------------------------------------------------------------------*/</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;main.h&quot;</span></span><br><br><span class="hljs-comment">/* Private includes ----------------------------------------------------------*/</span><br><span class="hljs-comment">/* USER CODE BEGIN Includes */</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;string.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;stdio.h&quot;</span></span><br><span class="hljs-comment">/* USER CODE END Includes */</span><br><br><span class="hljs-comment">/* Private typedef -----------------------------------------------------------*/</span><br><span class="hljs-comment">/* USER CODE BEGIN PTD */</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>	<span class="hljs-keyword">uint8_t</span>     motor_id;<br>	<span class="hljs-keyword">int16_t</span>     angle;<br>	<span class="hljs-keyword">int16_t</span>     current_get;<br>	<span class="hljs-keyword">int16_t</span>     speed_rpm;<br>	<span class="hljs-keyword">uint8_t</span>     temperature;<br>&#125;   <span class="hljs-keyword">motor_3508_t</span>;<br><span class="hljs-comment">/* USER CODE END PTD */</span><br><br><span class="hljs-comment">/* Private define ------------------------------------------------------------*/</span><br><span class="hljs-comment">/* USER CODE BEGIN PD */</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CAN1_DEVICE_NUM     4</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FIRST_GROUP_ID      0x200</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MOTOR_SPEED_MAX     16384</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CAN_DATA_SIZE       8</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CAN1_RX_ID_START    0x201</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MOTOR_ID            2</span><br><span class="hljs-comment">/* USER CODE END PD */</span><br><br><span class="hljs-comment">/* Private macro -------------------------------------------------------------*/</span><br><span class="hljs-comment">/* USER CODE BEGIN PM */</span><br><br><span class="hljs-comment">/* USER CODE END PM */</span><br><br><span class="hljs-comment">/* Private variables ---------------------------------------------------------*/</span><br>CAN_HandleTypeDef hcan1;<br><br>UART_HandleTypeDef huart7;<br><br><span class="hljs-comment">/* USER CODE BEGIN PV */</span><br><span class="hljs-keyword">int16_t</span> speedFlag=<span class="hljs-number">0</span>;<br><span class="hljs-keyword">uint8_t</span> can1_rx_buffer[CAN1_DEVICE_NUM][CAN_DATA_SIZE];<br><span class="hljs-keyword">motor_3508_t</span> motorPrintTest=&#123;.motor_id=MOTOR_ID&#125;;<br><span class="hljs-comment">/* USER CODE END PV */</span><br><br><span class="hljs-comment">/* Private function prototypes -----------------------------------------------*/</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SystemClock_Config</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MX_GPIO_Init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MX_CAN1_Init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MX_UART7_Init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;<br><span class="hljs-comment">/* USER CODE BEGIN PFP */</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">can_filter_enable</span><span class="hljs-params">(CAN_HandleTypeDef* hcan)</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">can_filter_disable</span><span class="hljs-params">(CAN_HandleTypeDef* hcan)</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">can_transmit</span><span class="hljs-params">(CAN_HandleTypeDef* hcan, <span class="hljs-keyword">uint16_t</span> id, <span class="hljs-keyword">int16_t</span> msg1, <span class="hljs-keyword">int16_t</span> msg2, <span class="hljs-keyword">int16_t</span> msg3, <span class="hljs-keyword">int16_t</span> msg4)</span></span>;<br><span class="hljs-comment">/* USER CODE END PFP */</span><br><br><span class="hljs-comment">/* Private user code ---------------------------------------------------------*/</span><br><span class="hljs-comment">/* USER CODE BEGIN 0 */</span><br><br><span class="hljs-comment">/* USER CODE END 0 */</span><br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * @brief  The application entry point.</span><br><span class="hljs-comment">  * @retval int</span><br><span class="hljs-comment">  */</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-comment">/* USER CODE BEGIN 1 */</span><br><br>  <span class="hljs-comment">/* USER CODE END 1 */</span><br><br>  <span class="hljs-comment">/* MCU Configuration--------------------------------------------------------*/</span><br><br>  <span class="hljs-comment">/* Reset of all peripherals, Initializes the Flash interface and the Systick. */</span><br>  HAL_Init();<br><br>  <span class="hljs-comment">/* USER CODE BEGIN Init */</span><br><br>  <span class="hljs-comment">/* USER CODE END Init */</span><br><br>  <span class="hljs-comment">/* Configure the system clock */</span><br>  SystemClock_Config();<br><br>  <span class="hljs-comment">/* USER CODE BEGIN SysInit */</span><br><br>  <span class="hljs-comment">/* USER CODE END SysInit */</span><br><br>  <span class="hljs-comment">/* Initialize all configured peripherals */</span><br>  MX_GPIO_Init();<br>  MX_CAN1_Init();<br>  MX_UART7_Init();<br>  <span class="hljs-comment">/* USER CODE BEGIN 2 */</span><br>  can_filter_disable(&amp;hcan1);<br>  HAL_CAN_ActivateNotification(&amp;hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);<br>  HAL_CAN_Start(&amp;hcan1);<br>  <span class="hljs-comment">/* USER CODE END 2 */</span><br><br>  <span class="hljs-comment">/* Infinite loop */</span><br>  <span class="hljs-comment">/* USER CODE BEGIN WHILE */</span><br>  <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>)<br>  &#123;<br>  	<span class="hljs-keyword">while</span>(speedFlag &lt;= MOTOR_SPEED_MAX/<span class="hljs-number">12</span>)&#123;<br>  		can_transmit(&amp;hcan1,FIRST_GROUP_ID,speedFlag,speedFlag,speedFlag,speedFlag);<br>	    speedFlag++;<br>  		HAL_Delay(<span class="hljs-number">1</span>);<br>  	&#125;<br>  	<span class="hljs-keyword">while</span>(speedFlag &gt;= -MOTOR_SPEED_MAX/<span class="hljs-number">12</span>)&#123;<br>  		can_transmit(&amp;hcan1,FIRST_GROUP_ID,speedFlag,speedFlag,speedFlag,speedFlag);<br>	    speedFlag--;<br>	    HAL_Delay(<span class="hljs-number">1</span>);<br>  	&#125;<br>    <span class="hljs-comment">/* USER CODE END WHILE */</span><br><br>    <span class="hljs-comment">/* USER CODE BEGIN 3 */</span><br>  &#125;<br>  <span class="hljs-comment">/* USER CODE END 3 */</span><br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * @brief System Clock Configuration</span><br><span class="hljs-comment">  * @retval None</span><br><span class="hljs-comment">  */</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SystemClock_Config</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>  RCC_OscInitTypeDef RCC_OscInitStruct = &#123;<span class="hljs-number">0</span>&#125;;<br>  RCC_ClkInitTypeDef RCC_ClkInitStruct = &#123;<span class="hljs-number">0</span>&#125;;<br><br>  <span class="hljs-comment">/** Configure the main internal regulator output voltage </span><br><span class="hljs-comment">  */</span><br>  __HAL_RCC_PWR_CLK_ENABLE();<br>  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);<br>  <span class="hljs-comment">/** Initializes the CPU, AHB and APB busses clocks </span><br><span class="hljs-comment">  */</span><br>  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;<br>  RCC_OscInitStruct.HSEState = RCC_HSE_ON;<br>  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;<br>  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;<br>  RCC_OscInitStruct.PLL.PLLM = <span class="hljs-number">6</span>;<br>  RCC_OscInitStruct.PLL.PLLN = <span class="hljs-number">168</span>;<br>  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;<br>  RCC_OscInitStruct.PLL.PLLQ = <span class="hljs-number">4</span>;<br>  <span class="hljs-keyword">if</span> (HAL_RCC_OscConfig(&amp;RCC_OscInitStruct) != HAL_OK)<br>  &#123;<br>    Error_Handler();<br>  &#125;<br>  <span class="hljs-comment">/** Initializes the CPU, AHB and APB busses clocks </span><br><span class="hljs-comment">  */</span><br>  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK<br>                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;<br>  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;<br>  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;<br>  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;<br>  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;<br><br>  <span class="hljs-keyword">if</span> (HAL_RCC_ClockConfig(&amp;RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)<br>  &#123;<br>    Error_Handler();<br>  &#125;<br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * @brief CAN1 Initialization Function</span><br><span class="hljs-comment">  * @param None</span><br><span class="hljs-comment">  * @retval None</span><br><span class="hljs-comment">  */</span><br><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MX_CAN1_Init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br><br>  <span class="hljs-comment">/* USER CODE BEGIN CAN1_Init 0 */</span><br><br>  <span class="hljs-comment">/* USER CODE END CAN1_Init 0 */</span><br><br>  <span class="hljs-comment">/* USER CODE BEGIN CAN1_Init 1 */</span><br><br>  <span class="hljs-comment">/* USER CODE END CAN1_Init 1 */</span><br>  hcan1.Instance = CAN1;<br>  hcan1.Init.Prescaler = <span class="hljs-number">3</span>;<br>  hcan1.Init.Mode = CAN_MODE_NORMAL;<br>  hcan1.Init.SyncJumpWidth = CAN_SJW_1TQ;<br>  hcan1.Init.TimeSeg1 = CAN_BS1_11TQ;<br>  hcan1.Init.TimeSeg2 = CAN_BS2_2TQ;<br>  hcan1.Init.TimeTriggeredMode = DISABLE;<br>  hcan1.Init.AutoBusOff = ENABLE;<br>  hcan1.Init.AutoWakeUp = DISABLE;<br>  hcan1.Init.AutoRetransmission = ENABLE;<br>  hcan1.Init.ReceiveFifoLocked = DISABLE;<br>  hcan1.Init.TransmitFifoPriority = DISABLE;<br>  <span class="hljs-keyword">if</span> (HAL_CAN_Init(&amp;hcan1) != HAL_OK)<br>  &#123;<br>    Error_Handler();<br>  &#125;<br>  <span class="hljs-comment">/* USER CODE BEGIN CAN1_Init 2 */</span><br><br>  <span class="hljs-comment">/* USER CODE END CAN1_Init 2 */</span><br><br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * @brief UART7 Initialization Function</span><br><span class="hljs-comment">  * @param None</span><br><span class="hljs-comment">  * @retval None</span><br><span class="hljs-comment">  */</span><br><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MX_UART7_Init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br><br>  <span class="hljs-comment">/* USER CODE BEGIN UART7_Init 0 */</span><br><br>  <span class="hljs-comment">/* USER CODE END UART7_Init 0 */</span><br><br>  <span class="hljs-comment">/* USER CODE BEGIN UART7_Init 1 */</span><br><br>  <span class="hljs-comment">/* USER CODE END UART7_Init 1 */</span><br>  huart7.Instance = UART7;<br>  huart7.Init.BaudRate = <span class="hljs-number">115200</span>;<br>  huart7.Init.WordLength = UART_WORDLENGTH_8B;<br>  huart7.Init.StopBits = UART_STOPBITS_1;<br>  huart7.Init.Parity = UART_PARITY_NONE;<br>  huart7.Init.Mode = UART_MODE_TX_RX;<br>  huart7.Init.HwFlowCtl = UART_HWCONTROL_NONE;<br>  huart7.Init.OverSampling = UART_OVERSAMPLING_16;<br>  <span class="hljs-keyword">if</span> (HAL_UART_Init(&amp;huart7) != HAL_OK)<br>  &#123;<br>    Error_Handler();<br>  &#125;<br>  <span class="hljs-comment">/* USER CODE BEGIN UART7_Init 2 */</span><br><br>  <span class="hljs-comment">/* USER CODE END UART7_Init 2 */</span><br><br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * @brief GPIO Initialization Function</span><br><span class="hljs-comment">  * @param None</span><br><span class="hljs-comment">  * @retval None</span><br><span class="hljs-comment">  */</span><br><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MX_GPIO_Init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>  GPIO_InitTypeDef GPIO_InitStruct = &#123;<span class="hljs-number">0</span>&#125;;<br><br>  <span class="hljs-comment">/* GPIO Ports Clock Enable */</span><br>  __HAL_RCC_GPIOD_CLK_ENABLE();<br>  __HAL_RCC_GPIOH_CLK_ENABLE();<br>  __HAL_RCC_GPIOB_CLK_ENABLE();<br>  __HAL_RCC_GPIOE_CLK_ENABLE();<br><br>  <span class="hljs-comment">/*Configure GPIO pin : Button_Pin */</span><br>  GPIO_InitStruct.Pin = Button_Pin;<br>  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;<br>  GPIO_InitStruct.Pull = GPIO_NOPULL;<br>  HAL_GPIO_Init(Button_GPIO_Port, &amp;GPIO_InitStruct);<br><br>  <span class="hljs-comment">/* EXTI interrupt init*/</span><br>  HAL_NVIC_SetPriority(EXTI2_IRQn, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>);<br>  HAL_NVIC_EnableIRQ(EXTI2_IRQn);<br><br>&#125;<br><br><span class="hljs-comment">/* USER CODE BEGIN 4 */</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">can_filter_enable</span><span class="hljs-params">(CAN_HandleTypeDef* hcan)</span></span>&#123;<br>	CAN_FilterTypeDef CAN_FilterConfigStructure;<br><br>	CAN_FilterConfigStructure.FilterIdHigh = <span class="hljs-number">0x0000</span>;<br>	CAN_FilterConfigStructure.FilterIdLow = <span class="hljs-number">0x0000</span>;<br>	CAN_FilterConfigStructure.FilterMaskIdHigh = <span class="hljs-number">0x0000</span>;<br>	CAN_FilterConfigStructure.FilterMaskIdLow = <span class="hljs-number">0x0000</span>;<br>	CAN_FilterConfigStructure.FilterFIFOAssignment = CAN_FILTER_FIFO0;<br>	CAN_FilterConfigStructure.FilterMode = CAN_FILTERMODE_IDMASK;<br>	CAN_FilterConfigStructure.FilterScale = CAN_FILTERSCALE_32BIT;<br>	CAN_FilterConfigStructure.FilterActivation = ENABLE;<br>	CAN_FilterConfigStructure.SlaveStartFilterBank = <span class="hljs-number">27</span>;<br><br>	CAN_FilterConfigStructure.FilterBank = <span class="hljs-number">0</span>;<br><br>	HAL_CAN_ConfigFilter(hcan, &amp;CAN_FilterConfigStructure);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">can_filter_disable</span><span class="hljs-params">(CAN_HandleTypeDef* hcan)</span></span>&#123;<br>	CAN_FilterTypeDef CAN_FilterConfigStructure;<br><br>	CAN_FilterConfigStructure.FilterIdHigh = <span class="hljs-number">0x0000</span>;<br>	CAN_FilterConfigStructure.FilterIdLow = <span class="hljs-number">0x0000</span>;<br>	CAN_FilterConfigStructure.FilterMaskIdHigh = <span class="hljs-number">0x0000</span>;<br>	CAN_FilterConfigStructure.FilterMaskIdLow = <span class="hljs-number">0x0000</span>;<br>	CAN_FilterConfigStructure.FilterFIFOAssignment = CAN_FILTER_FIFO0;<br>	CAN_FilterConfigStructure.FilterMode = CAN_FILTERMODE_IDMASK;<br>	CAN_FilterConfigStructure.FilterScale = CAN_FILTERSCALE_32BIT;<br>	CAN_FilterConfigStructure.FilterActivation = DISABLE;<br>	CAN_FilterConfigStructure.SlaveStartFilterBank = <span class="hljs-number">27</span>;<br><br>	CAN_FilterConfigStructure.FilterBank = <span class="hljs-number">0</span>;<br><br>	HAL_CAN_ConfigFilter(hcan, &amp;CAN_FilterConfigStructure);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">can_transmit</span><span class="hljs-params">(CAN_HandleTypeDef* hcan, <span class="hljs-keyword">uint16_t</span> id, <span class="hljs-keyword">int16_t</span> msg1, <span class="hljs-keyword">int16_t</span> msg2, <span class="hljs-keyword">int16_t</span> msg3, <span class="hljs-keyword">int16_t</span> msg4)</span></span>&#123;<br>	CAN_TxHeaderTypeDef tx_header;<br>	<span class="hljs-keyword">uint8_t</span>             data[<span class="hljs-number">8</span>];<br>	<span class="hljs-keyword">uint32_t</span>            pTxMailbox;<br><br>	tx_header.StdId = id;<br>	tx_header.IDE   = CAN_ID_STD;<br>	tx_header.RTR   = CAN_RTR_DATA;<br>	tx_header.DLC   = CAN_DATA_SIZE;<br>	tx_header.TransmitGlobalTime = DISABLE;<br>	data[<span class="hljs-number">0</span>] = msg1 &gt;&gt; <span class="hljs-number">8</span>;<br>	data[<span class="hljs-number">1</span>] = msg1;<br>	data[<span class="hljs-number">2</span>] = msg2 &gt;&gt; <span class="hljs-number">8</span>;<br>	data[<span class="hljs-number">3</span>] = msg2;<br>	data[<span class="hljs-number">4</span>] = msg3 &gt;&gt; <span class="hljs-number">8</span>;<br>	data[<span class="hljs-number">5</span>] = msg3;<br>	data[<span class="hljs-number">6</span>] = msg4 &gt;&gt; <span class="hljs-number">8</span>;<br>	data[<span class="hljs-number">7</span>] = msg4;<br><br>	<span class="hljs-keyword">if</span> (HAL_CAN_AddTxMessage(hcan, &amp;tx_header, data, &amp;pTxMailbox) == HAL_OK)&#123;<br>		<span class="hljs-keyword">while</span> (HAL_CAN_IsTxMessagePending(hcan, pTxMailbox));<br>	&#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_CAN_RxFifo0MsgPendingCallback</span><span class="hljs-params">(CAN_HandleTypeDef *hcan)</span></span>&#123;<br>	CAN_RxHeaderTypeDef rx_header;<br>	rx_header.StdId = (CAN_RI0R_STID &amp; hcan-&gt;Instance-&gt;sFIFOMailBox[CAN_RX_FIFO0].RIR) &gt;&gt; CAN_TI0R_STID_Pos;<br>	<span class="hljs-keyword">uint8_t</span> idx = rx_header.StdId - CAN1_RX_ID_START;<br>	HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &amp;rx_header, can1_rx_buffer[idx]);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">can1_read</span><span class="hljs-params">(<span class="hljs-keyword">uint8_t</span> id, <span class="hljs-keyword">uint8_t</span> buf[CAN_DATA_SIZE])</span></span>&#123;<br>	<span class="hljs-built_in">memcpy</span>(buf, can1_rx_buffer[--id], CAN_DATA_SIZE);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_motor_data</span><span class="hljs-params">(<span class="hljs-keyword">motor_3508_t</span> *motor, <span class="hljs-keyword">uint8_t</span> buf[CAN_DATA_SIZE])</span></span>&#123;<br>	motor-&gt;angle        = (<span class="hljs-keyword">int16_t</span>)(buf[<span class="hljs-number">0</span>] &lt;&lt; <span class="hljs-number">8</span> | buf[<span class="hljs-number">1</span>]);<br>	motor-&gt;speed_rpm    = (<span class="hljs-keyword">int16_t</span>)(buf[<span class="hljs-number">2</span>] &lt;&lt; <span class="hljs-number">8</span> | buf[<span class="hljs-number">3</span>]);<br>	motor-&gt;current_get  = (<span class="hljs-keyword">int16_t</span>)(buf[<span class="hljs-number">4</span>] &lt;&lt; <span class="hljs-number">8</span> | buf[<span class="hljs-number">5</span>]);<br>	motor-&gt;temperature  = (<span class="hljs-keyword">uint8_t</span>)buf[<span class="hljs-number">6</span>];<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print_motor_data</span><span class="hljs-params">(<span class="hljs-keyword">motor_3508_t</span> *motor, <span class="hljs-keyword">char</span> *msg)</span></span>&#123;<br>	<span class="hljs-built_in">sprintf</span>(msg, <span class="hljs-string">&quot;======== 3508 at CAN bus ========\r\n&quot;</span>\<br>	             <span class="hljs-string">&quot;ID           %d\r\n&quot;</span>\<br>	             <span class="hljs-string">&quot;Angle        %d\r\n&quot;</span>\<br>	             <span class="hljs-string">&quot;Current      %d\r\n&quot;</span>\<br>	             <span class="hljs-string">&quot;Speed        %d\r\n&quot;</span>\<br>	             <span class="hljs-string">&quot;Temperature  %u\r\n&quot;</span>\<br>	             <span class="hljs-string">&quot;=================================\r\n\r\n&quot;</span>\<br>	             , motor-&gt;motor_id, motor-&gt;angle, motor-&gt;current_get, motor-&gt;speed_rpm, motor-&gt;temperature);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_GPIO_EXTI_Callback</span><span class="hljs-params">(<span class="hljs-keyword">uint16_t</span> GPIO_Pin)</span></span>&#123;<br>	<span class="hljs-keyword">if</span>(GPIO_Pin == Button_Pin)&#123;<br>		can_filter_enable(&amp;hcan1);<br>		<span class="hljs-keyword">uint8_t</span> motorStatus[CAN_DATA_SIZE];<br>		<span class="hljs-keyword">char</span> motorMsg[<span class="hljs-number">250</span>];<br>		can1_read(MOTOR_ID,motorStatus);<br>		get_motor_data(&amp;motorPrintTest, motorStatus);<br>		print_motor_data(&amp;motorPrintTest, motorMsg);<br>		HAL_UART_Transmit(&amp;huart7, (<span class="hljs-keyword">uint8_t</span>*)motorMsg, <span class="hljs-built_in">strlen</span>(motorMsg), HAL_MAX_DELAY);<br>		can_filter_disable(&amp;hcan1);<br>	&#125;<br>&#125;<br><span class="hljs-comment">/* USER CODE END 4 */</span><br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * @brief  This function is executed in case of error occurrence.</span><br><span class="hljs-comment">  * @retval None</span><br><span class="hljs-comment">  */</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Error_Handler</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-comment">/* USER CODE BEGIN Error_Handler_Debug */</span><br>  <span class="hljs-comment">/* User can add his own implementation to report the HAL error return state */</span><br><br>  <span class="hljs-comment">/* USER CODE END Error_Handler_Debug */</span><br>&#125;<br><br><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span>  USE_FULL_ASSERT</span><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * @brief  Reports the name of the source file and the source line number</span><br><span class="hljs-comment">  *         where the assert_param error has occurred.</span><br><span class="hljs-comment">  * @param  file: pointer to the source file name</span><br><span class="hljs-comment">  * @param  line: assert_param error line source number</span><br><span class="hljs-comment">  * @retval None</span><br><span class="hljs-comment">  */</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">assert_failed</span><span class="hljs-params">(<span class="hljs-keyword">uint8_t</span> *file, <span class="hljs-keyword">uint32_t</span> line)</span></span><br><span class="hljs-function"></span>&#123; <br>  <span class="hljs-comment">/* USER CODE BEGIN 6 */</span><br>  <span class="hljs-comment">/* User can add his own implementation to report the file name and line number,</span><br><span class="hljs-comment">     tex: printf(&quot;Wrong parameters value: file %s on line %d\r\n&quot;, file, line) */</span><br>  <span class="hljs-comment">/* USER CODE END 6 */</span><br>&#125;<br><span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span> <span class="hljs-comment">/* USE_FULL_ASSERT */</span></span><br><br><span class="hljs-comment">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span><br><br></code></pre></div></td></tr></table></figure>
+
+<h3 id="5-3-效果展示"><a href="#5-3-效果展示" class="headerlink" title="5.3 效果展示"></a>5.3 效果展示</h3><iframe height=500 width=100% src="//player.bilibili.com/player.html?aid=242558868&bvid=BV1he411x7DN&cid=170233216&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%9C%BA%E6%A2%B0%E7%A5%9E%E6%95%99/">机械神教</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/STM32/">STM32</a>
+                    
+                      <a class="hover-with-bg" href="/tags/RoboMaster/">RoboMaster</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/fa0386b7/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">双车杀单王</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/fd31d369/">
+                        <span class="hidden-mobile">进阶篇 VI [Timer & PWM]</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
